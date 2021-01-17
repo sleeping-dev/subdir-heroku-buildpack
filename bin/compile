@@ -9,7 +9,6 @@ CACHE_DIR=${2:-}
 ENV_DIR=${3:-}
 
 if [ -f $ENV_DIR/CLIENT_PATH ]; then
-	echo "CLIENT_PATH EXISTS"
 	CLIENT_PATH = `cat $ENV_DIR/CLIENT_PATH`
 	if [ -d $BUILD_DIR/$CLIENT_PATH ]; then
 		echo "-----> Subdir buildpack in $CLIENT_PATH"
